@@ -1,0 +1,13 @@
+# Ignore compiled executales
+ *.exe
+
+# Ignore vs code specific environment settings
+.vscode/
+
+# Ignore temporary c++ objects 
+*.o
+.obj
+
+# Ignore local data files you don't want to share (optional)
+student.txt
+student.txt
