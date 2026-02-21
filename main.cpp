@@ -1,15 +1,16 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 using namespace std;
 
-Class Student {
+class Student {
 private:
      string name;
      string indexNumber;
  public:
       void registerstudent () {
           cout << "Enter Student Name: ";
-          getline(clin, name);
+          getline(cin, name);
 
       }
       string getData(){
@@ -47,10 +48,10 @@ int main() {
         cin.ignore();
 
         if(choice == 1) {
-            student s;
+            Student s;
             s.registerstudent();
             saveStudent(s.getData());
-            cout << "Student saved successfully!\n"
+            cout << "Student saved successfully!\n";
         }
         else if(choice == 2) {
             viewStudents();
