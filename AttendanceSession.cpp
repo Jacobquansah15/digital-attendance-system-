@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+
 using namespace std;
 
 void AttendanceSession::createSession() {
@@ -16,7 +17,15 @@ void AttendanceSession::createSession() {
 
     // create filename
     string filename = "session_" + courseCode + "_" + date + ".txt";
+
+    //open file
     ofstream file(filename);
+
+    if (!file) {
+        cout << "error creating file name!\n";
+        return;
+    }
+    // write session details
     file << "Course: " << courseCode << endl;
     file << "Date: " << date << endl;
     file << "Duration: " << duration << endl;
